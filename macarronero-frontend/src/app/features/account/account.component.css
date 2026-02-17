@@ -1,0 +1,36 @@
+/* Estilos de la pagina de cuenta del usuario. */
+.account {
+  padding: 2.5rem 0;
+}
+
+.account__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.account__name {
+  margin-top: 0.5rem;
+  color: var(--color-muted);
+}
+
+.account__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.panel {
+  background: var(--color-surface);
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.panel ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}

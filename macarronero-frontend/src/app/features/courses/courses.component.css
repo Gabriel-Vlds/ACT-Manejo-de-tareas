@@ -1,0 +1,55 @@
+/* Estilos de la vista de cursos. */
+.page {
+  padding: 2.5rem 0;
+}
+
+.page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.tile {
+  background: var(--color-surface);
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+  display: grid;
+  gap: 1rem;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.note {
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+
+.skeleton {
+  height: 200px;
+  border-radius: 18px;
+  background: linear-gradient(120deg, #f0efe9, #f7f3ea, #f0efe9);
+  background-size: 200% 200%;
+  animation: shimmer 1.2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

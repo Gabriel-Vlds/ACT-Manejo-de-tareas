@@ -1,0 +1,35 @@
+<!-- Lista de kits disponibles. -->
+<section class="page">
+  <div class="page__header">
+    <div>
+      <h1>Kits de inicio</h1>
+      <p>Ventas con stock real y controlado.</p>
+    </div>
+  </div>
+
+  @if (message) {
+    <p class="note">{{ message }}</p>
+  }
+
+  <div class="grid">
+    @if (loading) {
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+    } @else {
+      @for (kit of kits; track kit.id) {
+        <article class="tile">
+          <h3>{{ kit.name }}</h3>
+          <p>{{ kit.description || 'Kit con ingredientes y utensilios.' }}</p>
+          <div class="meta">
+            <span>Stock {{ kit.stock }}</span>
+            <span>${{ kit.price }}</span>
+          </div>
+          <button class="btn btn--primary" [disabled]="kit.stock === 0" (click)="buy(kit.id)">
+            Comprar
+          </button>
+        </article>
+      }
+    }
+  </div>
+</section>
